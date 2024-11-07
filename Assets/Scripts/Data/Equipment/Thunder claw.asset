@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e617faa7366f9ff44a59e695f90aa359, type: 3}
-  m_Name: Stolen Sword
+  m_Name: Thunder claw
   m_EditorClassIdentifier: 
   itemType: 1
-  itemName: Stolen Sword
-  icon: {fileID: 1526008332, guid: 531449bddeebc254dabd6ca311138a48, type: 3}
+  itemName: Thunder Claw
+  icon: {fileID: 367297872, guid: 531449bddeebc254dabd6ca311138a48, type: 3}
+  dropChance: 0
   equipmentType: 0
+  itemEffects:
+  - {fileID: 11400000, guid: 1e97e29e13362e247943d971b7dabaf5, type: 2}
   strength: 0
   agility: 0
   intelligence: 0
   vitality: 0
-  damage: 12
-  critChance: 7
+  damage: 10
+  critChance: 0
   critPower: 0
   health: 0
   armor: 0
@@ -29,9 +32,5 @@ MonoBehaviour:
   magicResistance: 0
   fireDamage: 0
   iceDamage: 0
-  lightingDamage: 0
-  craftingmaterials:
-  - data: {fileID: 11400000, guid: 2808a622c40377b42aea4fb1afee6e1a, type: 2}
-    stackSize: 1
-  - data: {fileID: 11400000, guid: 0de8529def039b24ba50d1ec3106815a, type: 2}
-    stackSize: 1
+  lightingDamage: 5
+  craftingmaterials: []

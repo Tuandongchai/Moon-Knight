@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073cd4e3e8e544a42a5bfb0cbc99fca0, type: 3}
-  m_Name: Iron
+  m_Script: {fileID: 11500000, guid: 3c24a82e613d1fa448f7e0906708ec0e, type: 3}
+  m_Name: Thunder strike effect
   m_EditorClassIdentifier: 
-  itemType: 0
-  itemName: Iron
-  icon: {fileID: 1236261992, guid: f0ccef42d294885449e4dd8098d906e0, type: 3}
+  thunderStrikePrefab: {fileID: 8346044426548586946, guid: 562e360d5d978b54b9bb8d05461b6c73, type: 3}

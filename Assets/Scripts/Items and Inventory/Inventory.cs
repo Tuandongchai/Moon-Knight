@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     private static Inventory instance;
+    public List<ItemData> startingItems;
     public static Inventory Instance { get =>instance; }
 
     public List<InventoryItem> equipment;
@@ -46,6 +47,16 @@ public class Inventory : MonoBehaviour
         iventoryItemSlot = inventorySlotParent.GetComponentsInChildren<UI_ItemSlot>();
         stashItemSlot = stashSlotParent.GetComponentsInChildren<UI_ItemSlot>();
         equipmentSlot = equipmentSlotParent.GetComponentsInChildren<UI_EquipmentSlot>();
+        AddStartingItems();
+
+    }
+
+    private void AddStartingItems()
+    {
+        for (int i = 0; i < startingItems.Count; i++)
+        {
+            AddItem(startingItems[i]);
+        }
     }
 
     public void EquipItem(ItemData _item)
@@ -215,5 +226,19 @@ public class Inventory : MonoBehaviour
         return true;
 
     }
-    
+
+    public List<InventoryItem> GetEquipmentList() => equipment;
+
+    public List<InventoryItem> GetStashLlist() => stash;
+
+    public ItemData_Equipment GetEquipment(EquipmentType _type)
+    {
+        ItemData_Equipment equipedItem = null; 
+        foreach (KeyValuePair<ItemData_Equipment, InventoryItem> item in equipmentDictionary)
+        {
+            if (item.Key.equipmentType == _type)
+                equipedItem = item.Key;
+        }
+        return equipedItem;
+    }
 }
